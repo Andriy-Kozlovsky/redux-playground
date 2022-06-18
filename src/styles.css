@@ -1,7 +1,21 @@
+/* COLORS */
+:root {
+--text: #f1faeeff;
+--button: #e63946;
+--container: rgba(69, 123, 157, 0.6);
+--background: #1d3557ff;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+  background-color: var(--background);
+  display: grid;
+  place-content: center;
+}
 
