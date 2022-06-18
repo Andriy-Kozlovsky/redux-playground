@@ -1,22 +1,20 @@
+/* COLORS */
+:root {
+--text: #f1faeeff;
+--button: #e63946;
+--container: rgba(69, 123, 157, 0.6);
+--background: #1d3557ff;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: sans-serif;
-  color: #252525;
-  background-color: #252525;
-}
-
-button {
-  font: inherit;
-  cursor: pointer;
-  background-color: #3c0080;
-  border: 1px solid #3c0080;
-  color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 6px;
+  height: 100vh;
+  background-color: var(--background);
+  display: grid;
+  place-content: center;
 }
 
 button:hover,

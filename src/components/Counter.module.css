@@ -1,27 +1,52 @@
 .counter {
-  margin: 5rem auto;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
-  width: 40rem;
-  border-radius: 8px;
-  padding: 1rem;
+  background-color: var(--container);
+  padding: 20px 40px;
+  border-radius: 10px;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   text-align: center;
-  background-color: #f4f0fa;
 }
 
 .counter h1 {
-  text-transform: uppercase;
-  color: #575757;
-  margin: 0;
-  font-size: 1rem;
-}
-
-.value {
-  font-size: 2rem;
-  color: #3c0080;
-  margin: 2rem 0;
-  font-weight: bold;
+  font-size: 24px;
 }
 
 .counter button {
-  margin: .5rem;
+  cursor: pointer;
+  background-color: var(--button);
+  border: none;
+  color: var(--text);
+  letter-spacing: 1px;
+  font-size: 14px;
+  border-radius: 4px;
+  width: 64px;
+  height: 42px;
+}
+
+.counter p {
+  font-size: 24px;
+  border: 1.2px solid var(--text);
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  display: grid;
+  place-content: center;
+  border-radius: 99999px;
+}
+
+.counter button:hover, .counter button:active {
+  background-color: #fb5966;
+  color: rgb(255, 255, 255);
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.counter .btn-toggle {
+  width: 100%;
 }
