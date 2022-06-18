@@ -18,6 +18,6 @@ function App() {
       <button onClick={clearListHandler}>Borrar todo</button>
     </div>
   );
-}
+};
 
 export default App;
