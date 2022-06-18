@@ -1,6 +1,6 @@
 import {createStore} from "redux";
 
-const initialState = {showCounter: false, counter: 0};
+const initialState = {showCounter: true, counter: 0};
 
 const reducer = (state = initialState, action: any) => {
   if (action.type === "increment") {
