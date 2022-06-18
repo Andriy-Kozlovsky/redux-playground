@@ -1,24 +1,83 @@
-/* COLORS */
 :root {
---text: #f1faeeff;
---button: #e63946;
---container: rgba(69, 123, 157, 0.6);
---background: #1d3557ff;
+  --dark-olive-green: rgba(96, 108, 56, 0.5);
+  --kombu-green: #283618ff;
+  --cornsilk: rgba(254, 250, 224, 0.6);
+  --earth-yellow: rgba(221, 162, 94, 0.703);
+  --liver-dogs: #bc6c25ff;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  height: 100vh;
-  background-color: var(--background);
+  background-color: var(--kombu-green);
+  height: 75vh;
   display: grid;
   place-content: center;
+  font-family: sans-serif;
 }
 
-button:hover,
-button:active {
-  background-color: #5b14ac;
-  border-color: #5b14ac;
+.App {
+  background-color: var(--cornsilk);
+  padding: 20px 40px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+button {
+  font-size: 16px;
+  background-color: var(--liver-dogs);
+  border: none;
+  padding: 9px;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--earth-yellow);
+}
+
+ul {
+  background-color: var(--dark-olive-green);
+  border-radius: 4px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+li {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  font-size: 16px;
+  width: 70%;
+  outline: none;
+  border: 1px solid var(--kombu-green);
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+input:focus {
+  padding: 7px 12px;
+  border: 2px solid var(--liver-dogs);
+}
+
+h1 {
+  color: rgb(24, 33, 14);
 }
