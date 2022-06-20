@@ -1,7 +1,7 @@
 import {useSelector} from "react-redux";
 
 const Navbar = () => {
-  const amount = useSelector((state: any) => state.items.length);
+  const amount = useSelector((state: any) => state.list.items.length);
 
   return (
     <nav className="flex align-middle justify-between bg-gray-900 text-white max-w-xl px-4 py-2">

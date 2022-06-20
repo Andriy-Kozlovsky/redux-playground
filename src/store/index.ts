@@ -1,5 +1,7 @@
 import {configureStore, createSlice} from "@reduxjs/toolkit";
 
+import {statusSlice} from "./status-slice";
+
 interface Item {
   id: number;
   name: string;
@@ -38,11 +40,14 @@ const listSlice = createSlice({
     updateInputValue: (state, action) => {
       state.inputValue = action.payload;
     },
+    updateList: (state, action) => {
+      state.items = action.payload;
+    },
   },
 });
 
-const store = configureStore({reducer: listSlice.reducer});
+const store = configureStore({reducer: {list: listSlice.reducer, status: statusSlice.reducer}});
 
-export const {addItem, removeItem, editItem, updateInputValue} = listSlice.actions;
+export const {addItem, removeItem, editItem, updateInputValue, updateList} = listSlice.actions;
 
 export default store;

@@ -4,8 +4,8 @@ import {removeItem, editItem} from "../store";
 
 const List = () => {
   const dispatch = useDispatch();
-  const items = useSelector((state: any) => state.items);
-  const editId = useSelector((state: any) => state.editId);
+  const items = useSelector((state: any) => state.list.items);
+  const editId = useSelector((state: any) => state.list.editId);
 
   const handleRemove = (index: number) => {
     dispatch(removeItem(index));
@@ -25,7 +25,9 @@ const List = () => {
           {item.name}
           <div>
             <button
-              className="bg-blue-900 rounded-md px-2 text-white font-normal mr-2 hover:bg-blue-600"
+              className={`bg-blue-900 rounded-md px-2 text-white font-normal mr-2 hover:bg-blue-600 ${
+                item.id === editId && "bg-red-500"
+              }`}
               onClick={() => handleEdit(index)}
             >
               E

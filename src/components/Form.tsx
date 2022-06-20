@@ -4,8 +4,8 @@ import {addItem, updateInputValue} from "../store";
 
 const Form = () => {
   const dispatch = useDispatch();
-  const inputValue = useSelector((state: any) => state.inputValue);
-  const editId = useSelector((state: any) => state.editId);
+  const inputValue = useSelector((state: any) => state.list.inputValue);
+  const editId = useSelector((state: any) => state.list.editId);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(updateInputValue(e.target.value));
@@ -25,7 +25,11 @@ const Form = () => {
         value={inputValue}
         onChange={(e) => handleChange(e)}
       />
-      <button className="bg-blue-900 text-white px-4 rounded-md hover:bg-blue-700">
+      <button
+        className={`bg-blue-900 text-white px-4 rounded-md hover:bg-blue-700 ${
+          editId > 0 && "bg-red-500"
+        }`}
+      >
         {editId > 0 ? "Editar" : "Agregar"}
       </button>
     </form>
