@@ -2,8 +2,8 @@ import CartButton from "../Cart/CartButton";
 
 const MainHeader = () => {
   return (
-    <header>
-      <h1>ReduxCart</h1>
+    <header className="bg-headerBg h-20 px-20 flex items-center justify-between">
+      <h1 className="text-white text-3xl font-bold">ReduxCart</h1>
       <nav>
         <ul>
           <CartButton />

@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{js,ts,tsx}"],
   theme: {
+    fontFamily: {
+      sans: ["Noto Sans JP", "sans-serif"],
+    },
     extend: {
       colors: {
         badgeTxt: "#1d1d1d",
