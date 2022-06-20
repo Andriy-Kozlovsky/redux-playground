@@ -5,7 +5,9 @@ import Cart from "./components/Cart/Cart";
 import Layout from "./components/Layout/Layout";
 import Products from "./components/Shop/Products";
 import Notification from "./components/UI/Notification";
-import {sendCartData} from "./store/cart-slice";
+import {sendCartData, fetchCartData} from "./store/cart-actions";
+
+let initial = true;
 
 function App() {
   const dispatch = useDispatch();
@@ -15,7 +17,19 @@ function App() {
 
   useEffect(() => {
     // @ts-ignore
-    dispatch(sendCartData(cart));
+    dispatch(fetchCartData());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (initial) {
+      initial = false;
+
+      return;
+    }
+    if (cart.changed) {
+      // @ts-ignore
+      dispatch(sendCartData(cart));
+    }
   }, [cart, dispatch]);
 
   return (
